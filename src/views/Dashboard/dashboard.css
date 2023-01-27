@@ -1,4 +1,6 @@
 .dashboard_invest {
+    color: #fff;
+
 }
 
 .dashboard_invest .bomb-summary {
@@ -54,5 +56,147 @@
   .dashboard_invest .bomb-summary .summary-table table tr img {
     width: 30px;
     margin: 4px;
+  }
+
+  .dashboard_invest h2 {
+    /* font-family: Nunito; */
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 30px;
+    color: #fff !important;
+  }
+
+  .dashboard_invest .invest-strategy {
+    display: flex;
+    width: 80%;
+    margin: 20px auto;
+  }
+  
+  .dashboard_invest .invest-strategy .strategy-col {
+    width: 70%;
+    padding: 10px;
+  }
+  
+  .dashboard_invest .invest-strategy .strategy-col .read_link {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  .dashboard_invest .invest-strategy .strategy-col .read_link a {
+    text-align: right;
+  }
+  
+  .btn-invest {
+    box-sizing: border-box;
+  
+    width: 646px;
+    height: 40px;
+  
+    background: radial-gradient(
+        59345.13% 4094144349.28% at 39511.5% -2722397851.45%,
+        rgba(0, 245, 171, 0.5) 0%,
+        rgba(0, 173, 232, 0.5) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+    /* identical to box height */
+  
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .dashboard_invest .invest-strategy .strategy-col .links-to {
+    display: flex;
+    justify-content: space-between;
+  }
+  .dashboard_invest .invest-strategy .strategy-col .links-to div {
+    box-sizing: border-box;
+    width: 48%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid #728cdf;
+    backdrop-filter: blur(12.5px);
+    margin: 10px 0;
+  }
+  
+  .dashboard_invest .invest-strategy .board-room {
+    box-sizing: border-box;
+    width: 646px;
+    height: 202px;
+  
+    background: rgba(35, 40, 75, 0.75);
+    border: 1px solid #728cdf;
+    backdrop-filter: blur(5px);
+    /* Note: backdrop-filter has minimal browser support */
+    padding: 10px 3%;
+    border-radius: 10px;
+  }
+  
+  .dashboard_invest .invest-strategy .board-room .head {
+    display: flex;
+    width: 100%;
+  }
+  .dashboard_invest .invest-strategy .board-room .head .head-img {
+    width: 10%;
+  }
+  
+  .dashboard_invest .invest-strategy .board-room .info {
+    display: flex;
+    width: 90%;
+  }
+  .dashboard_invest .invest-strategy .board-room .info .content {
+    /* display: flex; */
+
+  }
+  
+  .dashboard_invest .invest-strategy .board-room .info .content .head_content {
+    /* display: flex; */
+    display: flex;
+  }
+  
+  .dashboard_invest .invest-strategy .board-room .info-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .table {
+    width: 60%;
+  }
+  
+  .table .head {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .table .info {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  
+    .dashboard_invest .invest-strategy .board-room .info-content .table .info {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  
+  .dashboard_invest .invest-strategy .board-room .info-content table {
+
+  }
+  
+  .dashboard_invest .invest-strategy .news {
+    box-sizing: border-box;
+    width: 40%;
+    height: 336px;
+    padding: 10px;
+    background: rgba(35, 40, 75, 0.75);
+    border: 1px solid #728cdf;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
   }
 
