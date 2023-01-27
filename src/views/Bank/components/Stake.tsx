@@ -112,6 +112,17 @@ const Stake: React.FC<StakeProps> = ({ bank }) => {
                     </Typography>
             {/* <Label text={`${bank.depositTokenName} Staked`} /> */}
           </StyledCardHeader>
+              {/* <IconButton onClick={onPresentWithdraw}>
+            <RemoveIcon />
+            asda
+          </IconButton> */}
+          <IconButton
+            disabled={bank.closedForStaking}
+            onClick={() => (bank.closedForStaking ? null : onPresentDeposit())}
+          >
+            asdasd  
+            <AddIcon />
+          </IconButton>
           <StyledCardActions>
             {approveStatus !== ApprovalState.APPROVED ? (
               <Button

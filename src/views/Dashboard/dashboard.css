@@ -3,6 +3,64 @@
 
 }
 
+.dashboard_invest .bomb-summary .summary {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  dashboard_invest .bomb-summary .left-summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .dashboard_invest .bomb-summary .left-head {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: #ffffff;
+    margin: 5px 0;
+  }
+  
+  .dashboard_invest .bomb-summary .bold-summary {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 25px;
+    text-align: center;
+    color: #ffffff;
+    margin: 5px 0;
+    border-bottom: 0.5px solid #fff;
+    padding-bottom: 5px;
+    width: 100%;
+  }
+  
+  .dashboard_invest .summary-clock {
+    height: 30px;
+  }
+  
+  .dashboard_invest .summary-clock p {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 25px;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .dashboard_invest .left-head-next {
+    border-bottom: 1x solid #fff !important;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: #ffffff;
+    margin: 5px 0;
+  }
+  
+  .dashboard_invest .bomb-summary .left-status span{
+      color:#00E8A2;
+  }
+
 .dashboard_invest .bomb-summary {
   box-sizing: border-box;
   width: 90%;
@@ -198,5 +256,63 @@
     border: 1px solid #728cdf;
     backdrop-filter: blur(5px);
     border-radius: 10px;
+  }
+
+ 
+
+.dashboard_invest .bomb-farm {
+    box-sizing: border-box;
+  margin: 20px auto;
+  padding: 10px 2%;
+    width: 80%;
+    height: 377.25px;
+    background: rgba(35, 40, 75, 0.75);
+    border: 1px solid #728cdf;
+    backdrop-filter: blur(5px);
+    /* Note: backdrop-filter has minimal browser support */
+  
+    border-radius: 10px;
+  }
+  .dashboard_invest .bomb-farm .head {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .dashboard_invest .bonds-container {
+    box-sizing: border-box;
+    margin: 20px auto;
+    padding: 10px 2%;
+    width: 80%;
+    height: 200px;
+    background: rgba(35, 40, 75, 0.75);
+    border: 1px solid #728cdf;
+    backdrop-filter: blur(5px);
+    /* Note: backdrop-filter has minimal browser support */
+  
+    border-radius: 10px;
+  }
+  
+  .dashboard_invest .bonds-container-invest {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dashboard_invest .bonds-container-invest .head-show .head-img-show img {
+    width: 33px;
+    margin-right: 10px;
+  }
+  
+  .dashboard_invest .bonds-container-invest .head-show {
+    display: flex;
+  }
+  .dashboard_invest .bonds-container p {
+    margin: 0;
+    width: 638px;
+    height: 18px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+  
+    color: #ffffff;
   }
 

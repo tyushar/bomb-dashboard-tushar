@@ -1,0 +1,38 @@
+.bond-content-jt {
+    display:grid;
+    grid-template-columns: 30% 30% 40%;
+    margin-top: 30px;
+  }
+  
+  .bond-content-jt .content-it {
+  }
+  
+  .bond-content-jt .btn-content p {
+    margin: 0;
+    /* width: 0; */
+  }
+  
+  .bond-content-jt p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 25px;
+    /* identical to box height, or 156% */
+  
+    text-align: center;
+  }
+  
+  .bond-content-jt div {
+  
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+    /* identical to box height */
+  
+    text-align: center;
+  
+    color: #ffffff;
+  }
+  
+  .bond-content-jt .bond-box-btn-jt .btn-container-jt{
+    display: flex;
+  }

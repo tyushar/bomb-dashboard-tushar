@@ -16,9 +16,18 @@ import useStakedBalanceOnBoardroom from '../../hooks/useStakedBalanceOnBoardroom
 import useStakedTokenPriceInDollars from '../../hooks/useStakedTokenPriceInDollars';
 import useBombFinance from '../../hooks/useBombFinance';
 import useFetchBoardroomAPR from '../../hooks/useFetchBoardroomAPR';
-
+import useStatsForPool from '../../hooks/useStatsForPool';
+import useBank from '../../hooks/useBank';
+import { useWallet } from 'use-wallet';
+import useEarnings from '../../hooks/useEarnings';
+import Show from './components/Show';
+import BondDash from './components/BondDash';
 import HomeImage from '../../assets/img/background.jpg';
 import { createGlobalStyle } from 'styled-components';
+import img1 from '../../assets/img/bomb-bitcoin-LP.png';
+import img2 from '../../assets/img/bshare-bnb-LP.png';
+import img3 from '../../assets/img/bbond.png';
+
 // const BackgroundImage = createGlobalStyle`
 //   body {
 //     background: url(${HomeImage}) repeat !important;
@@ -33,6 +42,7 @@ const Dashboard = () => {
     const currentEpoch = useCurrentEpoch();
     const bombFinance = useBombFinance();
     const stakedBalance = useStakedBalanceOnBoardroom();
+    
 
     
      const earnings = useEarningsOnBoardroom();
@@ -82,6 +92,12 @@ const Dashboard = () => {
       [tBondStats],
     );
 
+    const { account } = useWallet();
+    const bank = useBank('BombBtcbLPBShareRewardPool');
+    const statsOnPool = useStatsForPool(bank);
+    const earnings_bomb_farm = useEarnings(bank.contract, bank.earnTokenName, bank.poolId);
+    //   console.log(bank, 'bank');
+
   return (
     <>
       <div className={'dashboard_invest'}>
@@ -92,31 +108,46 @@ const Dashboard = () => {
           <div className="header-div"></div>
           <div className="summary">
             <div className="summary-table">
-              <div className="header">
-                <div className="head"></div>
-                <div className="head">Current Supply</div>
-                <div className="head">Total Supply</div>
-                <div className="head">Price</div>
-                <div className="head"></div>
+            <table>
+                <tr>
+                  <th></th>
+                  <th>Current Supply</th>
+                  <th>Total Supply</th>
+                  <th>Earned: </th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <td>2%</td>
+                  <td>asd</td>
+                  <td>asd</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>≈ $asd</td>
+                  <td>≈ $asd</td>
+                </tr>
+              </table>
               </div>
             </div>
 
             <div className="left-summary">
-              <p className="left-head">Current Epoch</p>
-              <p className="bold-summary">{Number(currentEpoch)}</p>
-              <p className="bold-summary">03:38:36</p>
-              <ProgressCountdown base={moment().toDate()} hideBar={true} deadline={to} description="Next Epoch" />
-              <p className="left-head">Next Epoch in</p>
+            <div className="left-head">Current Epoch</div>
+              <div className="bold-summary">{Number(currentEpoch)}</div>
+              <div className="summary-clock">
+                <ProgressCountdown base={moment().toDate()} hideBar={true} deadline={to} description="Next Epoch" />
+              </div>
+
+              <div className="left-head-next">Next Epoch in</div>
               <div className="left-status">
-                <p>
+              <div>
                   Live TWAP: <span>1.17</span>
-                </p>
-                <p>
+                  </div>
+                <div>
                   TVL: <span>$5,002.412</span>
-                </p>
-                <p>
+                  </div>
+                <div>
                   Live TWAP: <span>1.22</span>
-                </p>
+                  </div>
               </div>
             </div>
           </div>
@@ -172,7 +203,7 @@ const Dashboard = () => {
                 <div className="tags">
                   <div>Deposit</div>
                   <div>Withdraw</div>
-                  <div>Clain Rewards</div>
+                  <div>Claim Rewards</div>
                 </div>
               </div>
             </div>
@@ -181,8 +212,38 @@ const Dashboard = () => {
             <h2>Latest News</h2>
           </div>
         </div>
-
-      </div>
+ {bank ? (
+          <div className="bomb-farm">
+            <div className="head">
+              <div className="content">
+                <h2>Bomb Farms</h2>
+                <p>Stake your LP tokens in our farms to start earning $BSHARE</p>
+              </div>
+              <div className="claim">Claim all</div>
+            </div>
+            <Show img={img1} id={'BombBtcbLPBShareRewardPool'} />
+            <Show img={img2} id={'BshareBnbLPBShareRewardPool'} />
+          </div>
+        ) : (
+          <></>
+        )}
+        <div className="bonds-container-invest">
+          <div className="head-show">
+            <div className="head-img-show">
+              <img src={img3} />
+            </div>
+            <div className="info-show">
+              <div className="content-show">
+                <div className="head_content-show">
+                  <h2>Boardroom</h2>
+                </div>
+                <p>BBOND can be purchased only on contraction periods, when TWAP of BOMB is below 1</p>
+              </div>
+            </div>
+          </div>
+          <BondDash/>
+        </div>
+    
     </>
   );
 };
