@@ -5,7 +5,6 @@ import useShareStats from '../../../hooks/usebShareStats';
 import useEarnings from '../../../hooks/useEarnings';
 import useHarvest from '../../../hooks/useHarvest';
 import useModal from '../../../hooks/useModal';
-import useRedeem from '../../../hooks/useRedeem';
 import useStake from '../../../hooks/useStake';
 import useStakedBalance from '../../../hooks/useStakedBalance';
 import useStakedTokenPriceInDollars from '../../../hooks/useStakedTokenPriceInDollars';
@@ -89,7 +88,7 @@ const Show = ({ id, img }) => {
         <div className="info-show">
           <div className="content-show">
             <div className="head_content-show">
-              <h2>Boardroom</h2>
+              <h2> {bank.depositTokenName}</h2>
               <div className="recommend">Recommended</div>
             </div>
           </div>

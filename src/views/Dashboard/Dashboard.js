@@ -11,8 +11,6 @@ import useStakedTokenPriceInDollars from '../../hooks/useStakedTokenPriceInDolla
 import useBombFinance from '../../hooks/useBombFinance';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
-import HomeImage from '../../assets/img/background.jpg';
-import { createGlobalStyle } from 'styled-components';
 
 import img1 from '../../assets/img/bomb-bitcoin-LP.png';
 import img2 from '../../assets/img/bshare-bnb-LP.png';
@@ -21,13 +19,11 @@ import img4 from '../../assets/img/bshares.png';
 import meta from '../../assets/img/metamask-fox.svg';
 import doc from '../../assets/img/doc.png';
 import discord from '../../assets/img/discord.png';
-
+import { Button } from '@material-ui/core';
 import useFetchBoardroomAPR from '../../hooks/useFetchBoardroomAPR';
 
 //bomb-farm
 import useBank from '../../hooks/useBank';
-import { useWallet } from 'use-wallet';
-import useEarnings from '../../hooks/useEarnings';
 import Show from './components/Show';
 import BondDash from './components/BondDash';
 import { roundAndFormatNumber } from '../../0x';
@@ -51,7 +47,6 @@ const Dashboard = () => {
   const currentEpoch = useCurrentEpoch();
   const earnings = useEarningsOnBoardroom();
   const bombStats = useBombStats();
-
   // invest strategy section
   const stakedTokenPriceInDollars = useStakedTokenPriceInDollars('BSHARE', bombFinance.BSHARE);
   const tokenPriceInDollars = React.useMemo(
@@ -130,7 +125,6 @@ const Dashboard = () => {
   );
   return (
     <>
-      {/* <BackgroundImage /> */}
       <div className={'dashboard_invest'}>
         <div className="bomb-summary">
           <div className="head-top">
@@ -281,7 +275,7 @@ const Dashboard = () => {
                 </div>
                 <div className="tags">
                   <div className="tag-top">
-                    <button onClick={onPresentDeposit}>Deposit</button>
+                    <button onClick={onPresentDeposit} >Deposit</button>
                     <button onClick={onPresentWithdraw}>Withdraw</button>
                   </div>
                   <button onClick={onReward}>Claim Rewards</button>
@@ -300,7 +294,7 @@ const Dashboard = () => {
                 <h2>Bomb Farms</h2>
                 <p>Stake your LP tokens in our farms to start earning $BSHARE</p>
               </div>
-              <button>Claim All</button>
+              <Button  onClick={onRedeem}>Claim All</Button>
             </div>
             <Show img={img1} id={'BombBtcbLPBShareRewardPool'} />
             <Show img={img2} id={'BshareBnbLPBShareRewardPool'} />
@@ -316,7 +310,7 @@ const Dashboard = () => {
             <div className="info-show">
               <div className="content-show">
                 <div className="head_content-show">
-                  <h2>Boardroom</h2>
+                  <h2>Bonds</h2>
                 </div>
                 <p>BBOND can be purchased only on contraction periods, when TWAP of BOMB is below 1</p>
               </div>

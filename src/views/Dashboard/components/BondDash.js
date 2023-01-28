@@ -49,19 +49,6 @@ const BondDash = () => {
     />,
   );
 
-  // const [onPresent2, onDismiss2] = useModal(
-  //   <ExchangeModal
-  //     title={action}
-  //     description={priceDesc}
-  //     max={balance}
-  //     onConfirm={(value) => {
-  //       onExchange(value);
-  //       onDismiss();
-  //     }}
-  //     action={action}
-  //     tokenName={fromTokenName}
-  //   />,
-  // );
 
   return (
     <div className="bond-content-jt">
