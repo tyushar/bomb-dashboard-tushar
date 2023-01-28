@@ -27,6 +27,8 @@ import { createGlobalStyle } from 'styled-components';
 import img1 from '../../assets/img/bomb-bitcoin-LP.png';
 import img2 from '../../assets/img/bshare-bnb-LP.png';
 import img3 from '../../assets/img/bbond.png';
+import img4 from '../../assets/img/bshares.png';
+import meta from '../../assets/img/metamask-fox.svg';
 
 // const BackgroundImage = createGlobalStyle`
 //   body {
@@ -92,11 +94,9 @@ const Dashboard = () => {
       [tBondStats],
     );
 
-    const { account } = useWallet();
+    
     const bank = useBank('BombBtcbLPBShareRewardPool');
-    const statsOnPool = useStatsForPool(bank);
-    const earnings_bomb_farm = useEarnings(bank.contract, bank.earnTokenName, bank.poolId);
-    //   console.log(bank, 'bank');
+   
 
   return (
     <>
@@ -113,18 +113,53 @@ const Dashboard = () => {
                   <th></th>
                   <th>Current Supply</th>
                   <th>Total Supply</th>
-                  <th>Earned: </th>
+                  <th>Price </th>
                   <th></th>
                 </tr>
                 <tr>
-                  <td>2%</td>
-                  <td>asd</td>
-                  <td>asd</td>
+                <td className="td1">
+                    <img src={meta} />
+                    <span>$BOMB</span>
+                  </td>
+                  <td>{roundAndFormatNumber(bombCirculatingSupply, 2)}</td>
+                  <td> {roundAndFormatNumber(bombTotalSupply, 2)}</td>
+                  <td>
+                    <div>${bombPriceInDollars ? roundAndFormatNumber(bombPriceInDollars, 2) : '-.--'}</div>{' '}
+                    <div>{bombPriceInBNB ? bombPriceInBNB : '-.----'} BTC</div>
+                  </td>
+                  <td>
+                    <img src={meta} />
+                  </td>
                 </tr>
                 <tr>
-                  <td></td>
-                  <td>≈ $asd</td>
-                  <td>≈ $asd</td>
+                  <td className="td1">
+                    <img src={meta} />
+                    <span>$BSHARE</span>
+                  </td>
+                  <td>{roundAndFormatNumber(bShareCirculatingSupply, 2)} </td>
+                  <td>{roundAndFormatNumber(bShareTotalSupply, 2)}</td>
+                  <td>
+                    <div>${bSharePriceInDollars ? bSharePriceInDollars : '-.--'}</div>{' '}
+                    <div>{bSharePriceInBNB ? bSharePriceInBNB : '-.----'} BNB</div>
+                  </td>
+                  <td>
+                    <img src={meta} />
+                  </td>
+                </tr>
+                <tr>
+                <td className="td1">
+                    <img src={meta} />
+                    <span>$BBOND</span>
+                  </td>
+                  <td>{roundAndFormatNumber(tBondCirculatingSupply, 2)}</td>
+                  <td>{roundAndFormatNumber(tBondTotalSupply, 2)}</td>
+                  <td>
+                    <div>${bSharePriceInDollars ? bSharePriceInDollars : '-.--'}</div>{' '}
+                    <div>{bSharePriceInBNB ? bSharePriceInBNB : '-.----'} BNB</div>
+                  </td>
+                  <td>
+                    <img src={meta} />
+                  </td>
                 </tr>
               </table>
               </div>
@@ -167,14 +202,16 @@ const Dashboard = () => {
             </div>
             <div className="board-room">
               <div className="head">
-                <div className="head-img">img</div>
+              <div className="head-img">
+                  <img src={img4} />
+                </div>
                 <div className="info">
                   <div className="content">
                     <div className="head_content">
                       <h2>Boardroom</h2>
-                      <div>Recommended</div>
+                      <div className="recommend">Recommended</div>
                     </div>
-                    <p>Stake BSHARE and earn BOMB every epoch</p>
+                    <div className="para">Stake BSHARE and earn BOMB every epoch</div>
                   </div>
                   <div className="TVL">TVL: $1,008,430</div>
                 </div>
@@ -184,26 +221,30 @@ const Dashboard = () => {
               </div>
               <div className="info-content">
                 <div className="table">
-                  <div className="head">
-                    <div>Daily return</div>
-                    <div>Your Stack</div>
-                    <div>Earned</div>
-                  </div>
-                  <div className="info">
-                    <div>{boardroomAPR.toFixed(2)}%</div>
-                    <div>{`${getDisplayBalance(stakedBalance)}`}</div>
-                    <div>{`${getDisplayBalance(earnings)}`}</div>
-                  </div>
-                  <div className="info">
-                    <div></div>
-                    <div>{`≈$${tokenPriceInDollars}`}</div>
-                    <div>{`≈$${earnedInDollars}`}</div>
-                  </div>
+                <table>
+                    <tr>
+                      <th>Daily Returns:</th>
+                      <th>Your Stake:</th>
+                      <th>Earned: </th>
+                    </tr>
+                    <tr>
+                      <td>{boardroomAPR.toFixed(2)}%</td>
+                      <td>{`${getDisplayBalance(stakedBalance)}`}</td>
+                      <td>{getDisplayBalance(earnings)}</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>{`≈$${tokenPriceInDollars}`}</td>
+                      <td>{`≈$${earnedInDollars}`}</td>
+                    </tr>
+                  </table>
                 </div>
                 <div className="tags">
-                  <div>Deposit</div>
-                  <div>Withdraw</div>
-                  <div>Claim Rewards</div>
+                <div className='tag-top'>
+                    <button>Deposit</button>
+                    <button>Withdraw</button>
+                  </div>
+                  <button>Clain Rewards</button>
                 </div>
               </div>
             </div>
