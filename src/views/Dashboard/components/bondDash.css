@@ -4,7 +4,8 @@
     margin-top: 30px;
   }
   
- 
+  .bond-content-jt .content-it {
+  }
   
   .bond-content-jt .btn-content p {
     margin: 0;
@@ -33,10 +34,10 @@
   }
   
   .bond-content-jt .bond-box-btn-jt .btn-container-jt{
-    display: flex;
     width: 100%;
+    display: flex;
     justify-content: space-between;
-
+  
   }
   
   .bond-content-jt .bond-box-btn-jt .btn-container-jt button{
@@ -56,3 +57,4 @@
     order: 0;
     flex-grow: 0;
   }
+  
