@@ -19,7 +19,7 @@ import img4 from '../../assets/img/bshares.png';
 import meta from '../../assets/img/metamask-fox.svg';
 import doc from '../../assets/img/doc.png';
 import discord from '../../assets/img/discord.png';
-import { Button } from '@material-ui/core';
+import bshare from '../../assets/img/bshare.png';
 import useFetchBoardroomAPR from '../../hooks/useFetchBoardroomAPR';
 
 //bomb-farm
@@ -275,10 +275,10 @@ const Dashboard = () => {
                 </div>
                 <div className="tags">
                   <div className="tag-top">
-                    <button onClick={onPresentDeposit} >Deposit</button>
-                    <button onClick={onPresentWithdraw}>Withdraw</button>
+                    <button   onClick={onPresentDeposit} >Deposit</button>
+                    <button   onClick={onPresentWithdraw}>Withdraw</button>
                   </div>
-                  <button onClick={onReward}>Claim Rewards</button>
+                  <button    onClick={onReward}>Claim Rewards <img  src={bshare} /> </button>
                 </div>
               </div>
             </div>
@@ -294,7 +294,7 @@ const Dashboard = () => {
                 <h2>Bomb Farms</h2>
                 <p>Stake your LP tokens in our farms to start earning $BSHARE</p>
               </div>
-              <Button  onClick={onRedeem}>Claim All</Button>
+              <button class="button-17" role="button" onClick={onRedeem}>Claim All <img  src={bshare} /></button>
             </div>
             <Show img={img1} id={'BombBtcbLPBShareRewardPool'} />
             <Show img={img2} id={'BshareBnbLPBShareRewardPool'} />

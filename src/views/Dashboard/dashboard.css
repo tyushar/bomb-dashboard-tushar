@@ -4,7 +4,7 @@
   
   .dashboard_invest h2 {
 
-    font-weight: 400;
+    font-weight: 300;
     font-size: 22px;
     line-height: 30px;
     color: #fff !important;
@@ -17,7 +17,7 @@
     margin: 30px auto;
     background:   rgba(35, 40, 75, 0.75);
     backdrop-filter: blur(5px);
-    border-radius: 10px;
+    border-radius: 17px;
   }
   .dashboard_invest .bomb-summary .summary {
     display: flex;
@@ -45,7 +45,7 @@
     align-items: center;
   }
   .dashboard_invest .bomb-summary .left-head {
-    font-weight: 400;
+    font-weight: 300;
     font-size: 15px;
     line-height: 25px;
     text-align: center;
@@ -54,7 +54,7 @@
   }
   
   .dashboard_invest .bomb-summary .bold-summary {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 25px;
     line-height: 25px;
     text-align: center;
@@ -71,7 +71,7 @@
   
   .dashboard_invest .summary-table .dashboard_invest .summary-clock p {
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 25px;
     text-align: center;
     color: #ffffff;
@@ -92,7 +92,7 @@
   
   .dashboard_invest .left-head-next {
     border-bottom: 1x solid #fff !important;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 15px;
     line-height: 25px;
     text-align: center;
@@ -147,7 +147,7 @@
   
   .dashboard_invest .invest-strategy .strategy-col .read_link a {
     text-align: right;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
     line-height: 22px;
     /* identical to box height */
@@ -166,10 +166,10 @@
     background: radial-gradient(
         59345.13% 4094144349.28% at 39511.5% -2722397851.45%,
         rgba(0, 245, 171, 0.5) 0%,
-        rgba(0, 173, 232, 0.5) 100%
+        rgb(0 190 255 / 98%) 100%
       )
       /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-    font-weight: 800;
+    font-weight: 700;
     font-size: 24px;
     line-height: 33px;
     /* identical to box height */
@@ -205,7 +205,7 @@
     border: 1px solid #728cdf;
     backdrop-filter: blur(5px);
     padding: 10px 3%;
-    border-radius: 10px;
+    border-radius: 17px;
   }
   
   .dashboard_invest .invest-strategy .board-room .head {
@@ -232,7 +232,7 @@
       width: 100%;
       display: flex;
       flex-direction:  row-reverse;
-      margin: 10px 0;
+      margin: 20px 0;
   }
   
   .dashboard_invest .invest-strategy .board-room .info-content .tags{ 
@@ -251,13 +251,39 @@
   
   .dashboard_invest .invest-strategy .board-room .info-content .tags button{ 
       
-      background-color: transparent;
-      border-radius: 10px;
-      border: 1px solid #fff;
-      padding: 5px;
-      margin: 0 5px;
-      color: #fff;
-      height: 30px;
+    align-items: center;
+    appearance: none;
+    background-color: #fff;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #3c4043;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: .25px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 2px 24px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform,opacity;
+    z-index: 0;
+    margin: 5px;
+    border: solid;
   }
   
   
@@ -278,6 +304,7 @@
   
   .dashboard_invest .invest-strategy .board-room .info .para {
     margin-top: 5px;
+    margin-bottom: 10px;
   }
   
   .dashboard_invest .invest-strategy .board-room .info .recommend {
@@ -322,7 +349,7 @@
     background: rgba(35, 40, 75, 0.75);
     border: 1px solid #728cdf;
     backdrop-filter: blur(5px);
-    border-radius: 10px;
+    border-radius: 17px;
   }
   
   /* bomb farm */
@@ -338,7 +365,7 @@
     backdrop-filter: blur(5px);
     /* Note: backdrop-filter has minimal browser support */
   
-    border-radius: 10px;
+    border-radius: 17px;
   }
   .dashboard_invest .bomb-farm .head {
     display: flex;
@@ -356,7 +383,7 @@
     backdrop-filter: blur(5px);
     /* Note: backdrop-filter has minimal browser support */
   
-    border-radius: 10px;
+    border-radius: 17px;
   }
   
   .dashboard_invest .bonds-container-jt {
@@ -375,8 +402,8 @@
   
   .dashboard_invest .bonds-container-jt p {
     margin: 0;
-    font-weight: 400;
-    font-size: 14px;
+    font-weight: 300;
+    font-size: 16px;
     line-height: 19px;
   
     color: #ffffff;
@@ -386,10 +413,10 @@
     /* padding: 5px; */
     margin: 10px;
     border: 1px solid #fff;
-    border-radius: 10px;
+    border-radius: 17px;
     height: 30px;
     background-color: transparent;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 15px;
     line-height: 20px;
     display: flex;
@@ -398,4 +425,75 @@
     flex: none;
     order: 0;
     flex-grow: 0;
+  }
+  
+/* CSS */
+.button-17 {
+    align-items: center;
+    appearance: none;
+    background-color: #fff;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #3c4043;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: .25px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 2px 24px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform,opacity;
+    z-index: 0;
+    border: solid;
+  }
+  
+  .button-17:hover {
+    background: #F6F9FE;
+    color: #174ea6;
+  }
+  
+  .button-17:active {
+    box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+    outline: none;
+  }
+  
+  .button-17:focus {
+    outline: none;
+    border: 2px solid #4285f4;
+  }
+  
+  .button-17:not(:disabled) {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+  }
+  
+  .button-17:not(:disabled):hover {
+    box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+  }
+  
+  .button-17:not(:disabled):focus {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+  }
+  
+  .button-17:not(:disabled):active {
+    box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+  }
+  
+  .button-17:disabled {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
   }

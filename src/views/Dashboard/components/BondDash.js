@@ -8,7 +8,8 @@ import useTokenBalance from '../../../hooks/useTokenBalance';
 import { useTransactionAdder } from '../../../state/transactions/hooks';
 import { getDisplayBalance } from '../../../utils/formatBalance';
 import ExchangeModal from '../../Bond/components/ExchangeModal';
-
+import bshare from '../components/bshare.png'
+import cart from '../components/shopping-cart.png'
 import './bondDash.css';
 
 const BondDash = () => {
@@ -66,14 +67,14 @@ const BondDash = () => {
             <p>Purchase BBond</p>
             <p>Bomb is over peg</p>
           </div>
-          <button onClick={onPresent1}>Purchase</button>
+          <button onClick={onPresent1}>Purchase <img  src={cart} /></button>
         </div>
         <div></div>
         <div className="btn-container-jt">
           <div className="btn-content">
-            <p>Purchase BBond</p>
+            <p>Reedeem Bomb</p>
           </div>
-          <button onClick={onPresent1}>Reedeem Bomb</button>
+          <button onClick={onPresent1}>Reedeem <img  src={bshare} /> </button>
         </div>
       </div>
     </div>

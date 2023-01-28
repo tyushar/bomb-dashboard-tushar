@@ -16,6 +16,7 @@ import DepositModal from '../../Bank/components/DepositModal';
 import WithdrawModal from '../../Bank/components/WithdrawModal';
 import './show.css';
 //image import
+import bshare from '../components/bshare.png'
 
 const Show = ({ id, img }) => {
   const bank = useBank(id);
@@ -115,9 +116,9 @@ const Show = ({ id, img }) => {
         </table>
 
         <div className="buttons-container">
-          <button onClick={onPresentDeposit}>deposit</button>
+          <button onClick={onPresentDeposit}>Deposit</button>
           <button onClick={onPresentWithdraw}>Withdraw</button>
-          <button onClick={onReward}>Claim Rewards</button>
+          <button onClick={onReward}>Claim Rewards <img  src={bshare} /> </button>
         </div>
       </div>
     </div>
